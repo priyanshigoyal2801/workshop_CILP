@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internship & Placement Guidance Workshop  -  Thapar University</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0A1628;
+    --navy-mid: #132240;
+    --navy-light: #1E3A5F;
+    --gold: #F5A623;
+    --gold-light: #FDD785;
+    --google-blue: #4285F4;
+    --google-red: #EA4335;
+    --google-yellow: #FBBC05;
+    --google-green: #34A853;
+    --salesforce-blue: #00A1E0;
+    --salesforce-dark: #032D60;
+    --cream: #FAFAF7;
+    --cream-dark: #F0EDE4;
+    --text-dark: #0A1628;
+    --text-mid: #3D4E63;
+    --text-light: #6B7A8D;
+    --accent-line: #D4AF5A;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    background: var(--navy);
+    color: white;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(245,166,35,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245,166,35,0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .hero-accent-bar {
+    height: 5px;
+    background: linear-gradient(90deg, var(--google-blue), var(--google-green), var(--salesforce-blue), var(--google-yellow));
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 64px 48px 56px;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(245,166,35,0.15);
+    border: 1px solid rgba(245,166,35,0.3);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 28px;
+  }
+
+  .hero-eyebrow-dot {
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: white;
+    margin-bottom: 16px;
+  }
+
+  .hero-title .highlight {
+    color: var(--gold);
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 40px;
+    max-width: 560px;
+  }
+
+  .hero-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .hero-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-meta-icon {
+    width: 36px; height: 36px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+
+  .hero-meta-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-meta-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.4);
+    font-weight: 500;
+  }
+
+  .hero-meta-value {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+  }
+
+  /* ─── SPEAKERS BAND ─── */
+  .speakers-band {
+    background: var(--navy-mid);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .speakers-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .speaker-divider {
+    background: rgba(255,255,255,0.1);
+    height: 80px;
+    align-self: center;
+  }
+
+  .speaker-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .speaker-avatar {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    flex-shrink: 0;
+    border: 2px solid rgba(255,255,255,0.15);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .speaker-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .speaker-avatar.priyanshi {
+    background: linear-gradient(135deg, #032D60, #00A1E0);
+    color: white;
+  }
+
+  .speaker-avatar.pratham {
+    background: linear-gradient(135deg, #1a73e8, #34A853);
+    color: white;
+  }
+
+  .speaker-badge {
+    position: absolute;
+    bottom: -2px; right: -2px;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px;
+    border: 2px solid var(--navy-mid);
+  }
+
+  .speaker-badge.sf { background: var(--salesforce-blue); }
+  .speaker-badge.g { background: white; color: red; }
+
+  .speaker-info {
+    flex: 1;
+  }
+
+  .speaker-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+  }
+
+  .speaker-role {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+
+  .company-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+
+  .company-badge.salesforce {
+    background: rgba(0,161,224,0.15);
+    border: 1px solid rgba(0,161,224,0.3);
+    color: #5CD3FF;
+  }
+
+  .company-badge.google {
+    background: rgba(66,133,244,0.15);
+    border: 1px solid rgba(66,133,244,0.3);
+    color: #82B1FF;
+  }
+
+  .company-logo-dots {
+    display: flex; gap: 2px;
+  }
+
+  .google-dot { width: 6px; height: 6px; border-radius: 50%; }
+
+  /* ─── SECTION WRAPPER ─── */
+  .section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 64px 48px;
+  }
+
+  .section + .section {
+    padding-top: 0;
+  }
+
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-line);
+    margin-bottom: 12px;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 20px; height: 1px;
+    background: var(--accent-line);
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 32px;
+    line-height: 1.15;
+  }
+
+  /* ─── ABOUT BOX ─── */
+  .about-box {
+    background: white;
+    border: 1px solid #E8E4DA;
+    border-radius: 16px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-box::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--gold), var(--accent-line));
+    border-radius: 4px 0 0 4px;
+  }
+
+  .about-text {
+    font-size: 16px;
+    color: var(--text-mid);
+    line-height: 1.75;
+  }
+
+  .about-text strong {
+    color: var(--text-dark);
+    font-weight: 600;
+  }
+
+  /* ─── OUTCOMES GRID ─── */
+  .outcomes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .outcome-card {
+    background: white;
+    border: 1px solid #E8E4DA;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+
+  .outcome-card:hover {
+    border-color: var(--gold);
+  }
+
+  .outcome-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .outcome-icon.blue { background: #EFF6FF; }
+  .outcome-icon.green { background: #F0FDF4; }
+  .outcome-icon.amber { background: #FFFBEB; }
+  .outcome-icon.purple { background: #FAF5FF; }
+
+  .outcome-text {
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  .outcome-text strong {
+    display: block;
+    font-size: 15px;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  /* ─── SCHEDULE ─── */
+  .schedule-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .day-card {
+    background: white;
+    border: 1px solid #E8E4DA;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .day-header {
+    padding: 24px 28px 20px;
+    position: relative;
+  }
+
+  .day-header.day1 {
+    background: var(--navy);
+  }
+
+  .day-header.day2 {
+    background: var(--navy-light);
+  }
+
+  .day-number {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 6px;
+  }
+
+  .day-date {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+  }
+
+  .day-theme {
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 400;
+  }
+
+  .day-time-badge {
+    position: absolute;
+    top: 24px; right: 24px;
+    background: rgba(245,166,35,0.2);
+    border: 1px solid rgba(245,166,35,0.35);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gold-light);
+  }
+
+  .day-topics {
+    padding: 24px 28px;
+  }
+
+  .topic-item {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #F3F0E8;
+    align-items: flex-start;
+  }
+
+  .topic-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .topic-bullet {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+    margin-top: 7px;
+  }
+
+  .topic-text {
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.5;
+  }
+
+  /* ─── SPECIAL FEATURES ─── */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  .feature-card {
+    background: white;
+    border: 1px solid #E8E4DA;
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .feature-icon-wrap {
+    width: 48px; height: 48px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    margin: 0 auto 12px;
+  }
+
+  .feature-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+  }
+
+  .feature-desc {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+
+  /* ─── COMPANY SPOTLIGHT ─── */
+  .company-spotlight {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 8px;
+  }
+
+  .company-card {
+    border-radius: 16px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .company-card.google-card {
+    background: #F8FBFF;
+    border: 1px solid #C8DFFF;
+  }
+
+  .company-card.sf-card {
+    background: #F0FAFF;
+    border: 1px solid #B3E5FA;
+  }
+
+  .company-wordmark {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+
+  .google-wordmark span:nth-child(1) { color: #4285F4; }
+  .google-wordmark span:nth-child(2) { color: #EA4335; }
+  .google-wordmark span:nth-child(3) { color: #FBBC05; }
+  .google-wordmark span:nth-child(4) { color: #4285F4; }
+  .google-wordmark span:nth-child(5) { color: #34A853; }
+  .google-wordmark span:nth-child(6) { color: #EA4335; }
+
+  .sf-wordmark { color: #00A1E0; }
+
+  .company-insight {
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .company-insight strong {
+    color: var(--text-dark);
+  }
+
+  .company-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin: 3px 3px 3px 0;
+  }
+
+  .google-tag {
+    background: rgba(66,133,244,0.1);
+    color: #1a56db;
+  }
+
+  .sf-tag {
+    background: rgba(0,161,224,0.1);
+    color: #0075a8;
+  }
+
+  /* ─── TIMELINE ─── */
+  .logistics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  .logistic-card {
+    background: white;
+    border: 1px solid #E8E4DA;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .logistic-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .logistic-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-light);
+    margin-bottom: 4px;
+  }
+
+  .logistic-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.3;
+  }
+
+  /* ─── CTA / FOOTER ─── */
+  .cta-band {
+    background: var(--navy);
+    color: white;
+    padding: 64px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-band::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(245,166,35,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245,166,35,0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .cta-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .cta-subtitle {
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 40px;
+  }
+
+  .cta-divider {
+    width: 48px; height: 2px;
+    background: var(--gold);
+    margin: 0 auto 32px;
+  }
+
+  .contact-row {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .contact-name {
+    font-weight: 600;
+    font-size: 15px;
+    color: white;
+  }
+
+  .contact-role {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .footer-bar {
+    background: #050D1A;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.04em;
+  }
+
+  .gold-line {
+    width: 48px; height: 2px;
+    background: var(--gold);
+    margin: 0 0 24px 0;
+  }
+
+  @media (max-width: 640px) {
+    .hero-inner, .section { padding: 40px 24px; }
+    .speakers-inner { grid-template-columns: 1fr; padding: 32px 24px; }
+    .speaker-divider { display: none; }
+    .outcomes-grid, .schedule-wrapper, .company-spotlight, .features-grid, .logistics-grid { grid-template-columns: 1fr; }
+    .hero-meta-row { flex-direction: column; gap: 12px; }
+    .cta-band { padding: 48px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-accent-bar"></div>
+  <div class="hero-grid-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-dot"></div>
+      Thapar Institute of Engineering & Technology
+    </div>
+    <h1 class="hero-title">
+      Internship &amp;<br>
+      <span class="highlight">Placement Guidance</span><br>
+      Workshop
+    </h1>
+    <p class="hero-subtitle">A two-day, student-focused program to help you land your dream internship  -  guided by engineers already there.</p>
+    <div class="hero-meta-row">
+      <div class="hero-meta-item">
+        <div class="hero-meta-icon">📅</div>
+        <div class="hero-meta-text">
+          <span class="hero-meta-label">Dates</span>
+          <span class="hero-meta-value">23rd &amp; 24th April, 2026</span>
+        </div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-icon">🕔</div>
+        <div class="hero-meta-text">
+          <span class="hero-meta-label">Time</span>
+          <span class="hero-meta-value">5:30 PM – 7:30 PM</span>
+        </div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-icon">🎓</div>
+        <div class="hero-meta-text">
+          <span class="hero-meta-label">For</span>
+          <span class="hero-meta-value">All Thapar Students</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SPEAKERS BAND -->
+<div class="speakers-band">
+  <div class="speakers-inner">
+    <!-- Priyanshi -->
+    <div class="speaker-card">
+      <div class="speaker-avatar priyanshi">
+        <img src="./Applicant_Photo.jpg" alt="Priyanshi" loading="lazy">
+      </div>
+
+      <div class="speaker-info">
+        <div class="speaker-name">Priyanshi</div>
+        <div class="speaker-role">Winner, Salesforce Futureforce AI Challenge<br>AMTS Intern at Salesforce</div>
+        <div class="company-badge salesforce">
+          <div>☁</div> Salesforce
+        </div>
+      </div>
+    </div>
+
+    <div class="speaker-divider"></div>
+
+    <!-- Pratham -->
+    <div class="speaker-card">
+      <div class="speaker-avatar pratham">
+        <img src="./Image copy.png" alt="Pratham Handa" loading="lazy" style="object-fit:fill;">
+      </div>
+      <div class="speaker-info">
+        <div class="speaker-name">Pratham Handa</div>
+        <div class="speaker-role">Web Solutions Engineer Intern at Google<br>(Off-Campus Selection)</div>
+        <div class="company-badge google">
+          <div class="company-logo-dots">
+            <div class="google-dot" style="background:#4285F4"></div>
+            <div class="google-dot" style="background:#EA4335"></div>
+            <div class="google-dot" style="background:#FBBC05"></div>
+            <div class="google-dot" style="background:#34A853"></div>
+          </div>
+          Google
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ABOUT -->
+<div class="section">
+  <div class="section-label">Overview</div>
+  <h2 class="section-title">Why This Workshop?</h2>
+  <div class="about-box">
+    <p class="about-text">
+      As placement season approaches, many students find themselves technically skilled but unprepared for the real mechanics of recruitment. This workshop bridges that gap  -  bringing <strong>two engineers who cracked internships at Google and Salesforce</strong> to walk you through exactly what worked for them. Over two focused evenings, you'll build a stronger resume, sharpen your DSA skills, and leave with a clear, actionable strategy to pursue internships and placements with confidence.
+    </p>
+  </div>
+
+  <div class="outcomes-grid" style="margin-top: 32px;">
+    <div class="outcome-card">
+      <div class="outcome-icon blue">📋</div>
+      <div class="outcome-text">
+        <strong>ATS-Optimized Resumes</strong>
+        Learn how recruiters actually read your resume and how to pass automated screening systems.
+      </div>
+    </div>
+    <div class="outcome-card">
+      <div class="outcome-icon green">🖋️</div>
+      <div class="outcome-text">
+        <strong>Off-Campus Strategy</strong>
+        Discover how to find and apply for opportunities beyond campus drives  -  the way Pratham got to Google.
+      </div>
+    </div>
+    <div class="outcome-card">
+      <div class="outcome-icon amber">⚡</div>
+      <div class="outcome-text">
+        <strong>DSA for Interviews</strong>
+        Topic-wise frequently asked questions with guided practice tailored to placement-level expectations.
+      </div>
+    </div>
+    <div class="outcome-card">
+      <div class="outcome-icon purple">🌐</div>
+      <div class="outcome-text">
+        <strong>LinkedIn &amp; Visibility</strong>
+        Optimize your profile so recruiters from companies like Google and Salesforce can find you.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SCHEDULE -->
+<div class="section" style="padding-top: 0;">
+  <div class="section-label">Program Structure</div>
+  <h2 class="section-title">Two Days. Real Impact.</h2>
+
+  <div class="schedule-wrapper">
+    <!-- DAY 1 -->
+    <div class="day-card">
+      <div class="day-header day1">
+        <div class="day-number">Day 01 · 23 April 2026</div>
+        <div class="day-date">Internship &amp; Placement Preparation</div>
+        <div class="day-theme">Strategy, Resumes &amp; Application Mastery</div>
+      </div>
+      <div class="day-topics">
+        <div class="topic-item">
+          <div class="topic-bullet"></div>
+          <div class="topic-text">How to find and apply for internship and placement opportunities (on-campus &amp; off-campus)</div>
+        </div>
+        <div class="topic-item">
+          <div class="topic-bullet"></div>
+          <div class="topic-text">Resume building fundamentals and ATS score improvement</div>
+        </div>
+        <div class="topic-item">
+          <div class="topic-bullet"></div>
+          <div class="topic-text">Common mistakes students make during applications and interviews</div>
+        </div>
+        <div class="topic-item">
+          <div class="topic-bullet"></div>
+          <div class="topic-text">LinkedIn optimization: profile visibility and recruiter searchability</div>
+        </div>
+        <div class="topic-item">
+          <div class="topic-bullet"></div>
+          <div class="topic-text">Building a strong, end-to-end application strategy</div>
+        </div>
+        <div class="topic-item">
+          <div class="topic-bullet"></div>
+          <div class="topic-text">Preparation strategy for internship and placement interviews</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day-card">
+      <div class="day-header day2">
+        <div class="day-number">Day 02 · 24 April 2026</div>
+        <div class="day-date">DSA Practice &amp; Placement Readiness</div>
+        <div class="day-theme">Technical Preparation &amp; Interview Confidence</div>
+      </div>
+      <div class="day-topics">
+        <div class="topic-item">
+          <div class="topic-bullet"></div>
+          <div class="topic-text">Topic-wise frequently asked DSA questions curated from real placement rounds</div>
+        </div>
+        <div class="topic-item">
+          <div class="topic-bullet"></div>
+          <div class="topic-text">Guided problem-solving discussion and approach walkthroughs</div>
+        </div>
+        <div class="topic-item">
+          <div class="topic-bullet"></div>
+          <div class="topic-text">Pre-session &amp; post-session evaluation to track readiness</div>
+        </div>
+        <div class="topic-item">
+          <div class="topic-bullet"></div>
+          <div class="topic-text">Quick revision framework designed for interview-oriented preparation</div>
+        </div>
+        <div class="topic-item">
+          <div class="topic-bullet"></div>
+          <div class="topic-text">Handouts and takeaway materials for continued practice</div>
+        </div>
+        <div class="topic-item">
+          <div class="topic-bullet"></div>
+          <div class="topic-text">Interactive Q&amp;A and live doubt-solving session</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SPECIAL FEATURES -->
+<div class="section" style="padding-top: 0;">
+  <div class="section-label">Session Features</div>
+  <h2 class="section-title">What Makes This Different</h2>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-title">Takeaway Materials</div>
+      <div class="feature-desc">Curated handouts and a quick-revision cheat sheet to keep after the session.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-title">Pre &amp; Post Evaluation</div>
+      <div class="feature-desc">Measure your growth over the two days with a structured assessment on Day 2.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-title">Live Q&amp;A</div>
+      <div class="feature-desc">Ask anything  -  from resume doubts to how to crack Google off-campus.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-title">Peer-to-Peer Learning</div>
+      <div class="feature-desc">Sessions led by Thapar alumni who went through exactly what you are facing.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-title">Interview Framework</div>
+      <div class="feature-desc">A repeatable, structured approach to cracking placement interviews confidently.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-title">Off-Campus Playbook</div>
+      <div class="feature-desc">A step-by-step guide to applying beyond campus, with real-world examples.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- COMPANY SPOTLIGHT -->
+<div class="section" style="padding-top: 0;">
+  <div class="section-label">Industry Insights</div>
+  <h2 class="section-title">Learn From Inside Google &amp; Salesforce</h2>
+
+  <div class="company-spotlight">
+    <div class="company-card google-card">
+      <div class="company-wordmark google-wordmark">
+        <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+      </div>
+      <p class="company-insight">
+        Pratham Handa secured his Web Solutions Engineer internship at Google <strong>entirely off-campus</strong> - without a referral. He'll break down the exact approach: how to position yourself, where to apply, and how to stand out in a globally competitive pool.
+      </p>
+      <span class="company-tag google-tag">Off-campus selection</span>
+      <span class="company-tag google-tag">Web engineering</span>
+      <span class="company-tag google-tag">Resume strategy</span>
+    </div>
+
+    <div class="company-card sf-card">
+      <div class="company-wordmark sf-wordmark">Salesforce</div>
+      <p class="company-insight">
+        Priyanshi won the <strong>Salesforce Futureforce AI Challenge</strong> and converted it into an internship. She'll share how competitions and hackathons can unlock recruiter doors, how to navigate Salesforce's hiring process, and how to position AI skills on a resume to catch attention in today's market.
+      </p>
+      <span class="company-tag sf-tag">Futureforce program</span>
+      <span class="company-tag sf-tag">AI challenge winner</span>
+      <span class="company-tag sf-tag">Cloud careers</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- LOGISTICS -->
+<div class="section" style="padding-top: 0;">
+  <div class="section-label">Logistics at a Glance</div>
+  <h2 class="section-title">Workshop Details</h2>
+
+  <div class="logistics-grid">
+    <div class="logistic-card">
+      <div class="logistic-label">Dates</div>
+      <div class="logistic-value">April 23 &amp; 24, 2026</div>
+    </div>
+    <div class="logistic-card">
+      <div class="logistic-label">Timing</div>
+      <div class="logistic-value">5:30 PM – 7:30 PM</div>
+    </div>
+    <div class="logistic-card">
+      <div class="logistic-label">Duration</div>
+      <div class="logistic-value">2 Hours / Day</div>
+    </div>
+    <div class="logistic-card">
+      <div class="logistic-label">Format</div>
+      <div class="logistic-value">Hands-on, Interactive</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="cta-inner">
+    <h2 class="cta-title">Ready to Get Placement-Ready?</h2>
+    <div class="cta-divider"></div>
+    <p class="cta-subtitle">Two evenings. Real stories. Actionable guidance. This is the head start your placement prep needs.</p>
+
+    <div class="contact-row">
+      <div class="contact-item">
+        <span class="contact-name">Priyanshi</span>
+        <span class="contact-role">Salesforce Intern · AI Challenge Winner</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-name">Pratham Handa</span>
+        <span class="contact-role">Google Intern · Web Solutions Engineer</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-bar">
+  Thapar Institute of Engineering & Technology · Placement Readiness Initiative · April 2026
+</div>
+
+</body>
+</html>
